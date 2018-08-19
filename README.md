@@ -1,5 +1,8 @@
 # UIManager
 
+## @JavaDoc
+https://aengmusae.sharing.kro.kr:18710/
+
 ## @Description
 I'm working on making the Android UI simple and easy to maintain.
 
