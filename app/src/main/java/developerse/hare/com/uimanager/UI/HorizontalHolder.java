@@ -1,4 +1,4 @@
-package example.hare.com.uimanagerexample.UI;
+package developerse.hare.com.uimanager.UI;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 
 import developers.hare.com.uimanager.Ui.ConstraintArrayView;
 import developers.hare.com.uimanager.VO.AttributeTable;
-import example.hare.com.uimanagerexample.databinding.HolderHorizontalBinding;
+import developerse.hare.com.uimanager.databinding.HolderHorizontalBinding;
 import lombok.Data;
 
 /**

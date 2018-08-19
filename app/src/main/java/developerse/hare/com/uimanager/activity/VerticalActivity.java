@@ -1,4 +1,4 @@
-package example.hare.com.uimanagerexample.activity;
+package developerse.hare.com.uimanager.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import developers.hare.com.uimanager.Ui.ConstraintArrayView;
-import example.hare.com.uimanagerexample.R;
-import example.hare.com.uimanagerexample.UI.HorizontalHolder;
-import example.hare.com.uimanagerexample.UI.VerticalHolder;
-import example.hare.com.uimanagerexample.databinding.ActivityVerticalBinding;
+import developerse.hare.com.uimanager.R;
+import developerse.hare.com.uimanager.UI.HorizontalHolder;
+import developerse.hare.com.uimanager.UI.VerticalHolder;
+import developerse.hare.com.uimanager.databinding.ActivityVerticalBinding;
 
 public class VerticalActivity extends AppCompatActivity {
 

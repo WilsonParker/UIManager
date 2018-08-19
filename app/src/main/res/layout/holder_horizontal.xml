@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="example.hare.com.uimanagerexample.UI.HorizontalHolder.HorizontalItem" />
+            type="developerse.hare.com.uimanager.UI.HorizontalHolder.HorizontalItem" />
     </data>
 
     <android.support.constraint.ConstraintLayout

@@ -15,7 +15,7 @@ import java.util.List;
 import developers.hare.com.uimanager.VO.AttributeTable;
 
 /**
- * @description
+ * description :
  * Deploy view using properties of ConstraintLayout
  * ConstraintLayout 의 특성을 이용해서 View 를 배치한다
  *
@@ -70,9 +70,9 @@ public class ConstraintArrayView extends ConstraintLayout {
     }
 
     /**
-     * @description
-     * Create and arrange ArrayItemHolder using List<? extends ArrayItem>
-     * List<? extends ArrayItem> 를 이용하여 ArrayItemHolder 를 만들어 배치한다
+     * description :
+     * Create and arrange ArrayItemHolder using List$lt;? extends ArrayItem$gt;
+     * List$lt;? extends ArrayItem$gt; 를 이용하여 ArrayItemHolder 를 만들어 배치한다
      *
      * @param items
      */
@@ -202,7 +202,7 @@ public class ConstraintArrayView extends ConstraintLayout {
     }
 
     /**
-     * @description
+     * description :
      * Determines the type in which to place the ArrayItemHolder
      * ArrayItemHolder 를 배치할 타입을 정한다
      *
@@ -216,7 +216,7 @@ public class ConstraintArrayView extends ConstraintLayout {
     }
 
     /**
-     * @description
+     * description :
      * Orientation to place ArrayItemHolder
      * ArrayItemHolder 를 배치할 방향 정한다
      *
@@ -264,25 +264,20 @@ public class ConstraintArrayView extends ConstraintLayout {
 
     public interface HolderCreateListener<H extends ArrayItemHolder, I extends ArrayItem> {
         /**
-         * @description
+         * description :
          * Create ArrayItemHolder using ArrayItem
          * H and I can be defined by implementing this interface
          *
          * ArrayItem 을 이용하여 ArrayItemHolder 를 생성해준다
          * H와 i는 인터페이스를 구현하면서 정의해줄 수 있다
          *
-         * @example
-         * new ConstraintArrayView.HolderCreateListener<HorizontalHolder, HorizontalHolder.HorizontalItem>() {
-         *      @Override
-         *      public HorizontalHolder createHolder(HorizontalHolder.HorizontalItem item) {
-         *          return new HorizontalHolder(HorizontalActivity.this, item);
-         *      }
-         *  }
-         *
-         * lambda : (ConstraintArrayView.HolderCreateListener<HorizontalHolder, HorizontalHolder.HorizontalItem>) (item) -> new HorizontalHolder(this, item)
+         * example : 
+         * lambda : (ConstraintArrayView.HolderCreateListener$lt;HorizontalHolder, HorizontalHolder.HorizontalItem$gt;) (item) -> new HorizontalHolder(this, item)
          *
          * Need a parameter that inherits ArrayItem
          * ArrayItem 을 상속한 파라미터가 필요하다
+         *
+         * @param table
          * @param i
          *
          * Return object that inherits ArrayItemHolder
@@ -293,7 +288,7 @@ public class ConstraintArrayView extends ConstraintLayout {
     }
 
     /**
-     * @description
+     * description :
      * A class with data for decorating ArrayItemHolder
      * ArrayItemHolder 를 꾸미기 위해 필요한 데이터를 가지고 있는 클래스
      */
@@ -316,19 +311,19 @@ public class ConstraintArrayView extends ConstraintLayout {
         }
 
         /**
-         * @description
+         * description : 
          * Returns the styleable id value to apply
          * 적용할 styleable id 값을 반환한다
          *
-         * @example
+         * example : 
          * return R.styleable.TextViewAttrs;
          *
          * res/values/attrs.xml
-         * <declare-styleable name="TextViewAttrs">
-         *      <attr name="text_color" format="reference|integer"/>
-         * </declare-styleable>
+         * &lt;declare-styleable name="TextViewAttrs"&gt;
+         *      &lt;attr name="text_color" format="reference|integer"/&gt;
+         * &lt;/declare-styleable&gt;
          *
-         * @return int[]
+         * @return
          */
         @Deprecated
         protected int[] getStyleResId(){
@@ -336,11 +331,11 @@ public class ConstraintArrayView extends ConstraintLayout {
         }
 
         /**
-         * @description
+         * description :
          * Decorate view with TypedArray
          * TypedArray 를 이용해 View 를 꾸며준다
          *
-         * @example
+         * example : 
          * int textColor = typedArray.getColor(R.styleable.TextViewAttrs_text_color, 0);
          * textView.setTextColor(textColor);
          *
@@ -352,7 +347,7 @@ public class ConstraintArrayView extends ConstraintLayout {
         }
 
         /**
-         * @description
+         * description :
          * Assign data to View using AttributeTable
          * AttributeTable 을 이용하여 View 에 데이터를 대입한다
          *
@@ -361,7 +356,7 @@ public class ConstraintArrayView extends ConstraintLayout {
         protected abstract void setAttribute(AttributeTable table);
 
         /**
-         * @description
+         * description :
          * Initialize Holder
          * Holder 를 초기화 한다
          *
@@ -370,7 +365,7 @@ public class ConstraintArrayView extends ConstraintLayout {
         public abstract void init(Context context);
 
         /**
-         * @description
+         * description :
          * Assign data to View using ArrayItem
          * ArrayItem 을 이용하여 View 에 데이터를 대입한다
          *

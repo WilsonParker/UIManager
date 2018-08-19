@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 28
@@ -34,9 +36,182 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
+//region Publish to jCenter
+/*
+def libGroupId = 'developers.hare.com'
+def libArtifactId = 'uimanager'
+def libVersion = '1.0.0'
+def libDesc = 'This is an Android project to create arrayview simply'
+def libLicenses = ['Apache-2.0']
+def libVCSUrl = 'https://github.com/WilsonParkers/UIManagerExample.git'
 
-// Generate Source Jar
-task sourceJar(type: Jar) {
+// Create the publication with the pom configuration
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            groupId libGroupId
+            artifactId libArtifactId
+            version libVersion
+            artifact(sourceJar)
+            artifact("$buildDir/outputs/aar/$libArtifactId-release.aar")
+        }
+    }
+}
+
+// Bintray config
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    publish = true // [Default : false] Whether version should be auto published after an upload
+    publications = ['MyPublication']
+    pkg {
+        repo = rootProject.ext.repositoryName
+        name = "$libGroupId:$libArtifactId"
+        desc = libDesc
+        licenses = libLicenses
+        vcsUrl = libVCSUrl
+        websiteUrl = rootProject.ext.websiteUrl
+        githubRepo = rootProject.ext.gitHubRepo
+        version {
+            name = libVersion
+            vcsTag = libVersion
+            released = new Date()
+        }
+    }
+}*/
+
+//endregion
+
+// JCenter publish
+/*task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    classifier "sources"
+    classifier = 'sources'
+}*/
+
+// Optional docs
+/*
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+*/
+
+// Optional javadoc
+/*task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}*/
+
+/*artifacts {
+    // archives javafocJar // Optional
+    archives sourcesJar
+}*/
+
+/*
+task findConvertions << {
+    println project.getConvention()
+}*/
+
+ext {
+    bintrayRepo = 'UIManager'
+    bintrayName = 'UIManager'
+    publishedGroupId = 'developers.hare.com'
+    libraryName = 'UIManager'
+    artifact = 'uiamanger'
+    libraryDescription = 'simple'
+
+    siteUrl = 'https://github.com/WilsonParkers/UIManager'
+    gitUrl = 'https://github.com/WilsonParkers/UIManager.git'
+    libraryVersion = '1.0.0'
+    developerId = 'hare'
+    developerName = 'TaehyunJeong'
+    developerEmail = 'zerad3208@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+group = publishedGroupId
+version = libraryVersion
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            packaging 'aar'
+            groupId publishedGroupId
+            artifactId artifact
+
+            name libraryName
+            description libraryDescription
+            url siteUrl
+
+            licenses {
+                license {
+                    name licenseName
+                    url licenseUrl
+                }
+            }
+            developers {
+                developer {
+                    id developerId
+                    name developerName
+                    email developerEmail
+                }
+            }
+            scm {
+                connection gitUrl
+                developerConnection gitUrl
+                url siteUrl
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = bintrayRepo
+        name = bintrayName
+        desc = libraryDescription
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = allLicenses
+        dryRun = false
+        publish = true
+        override = false
+        publicDownloadNumbers = true
+        version {
+            desc = libraryDescription
+        }
+    }
 }

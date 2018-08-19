@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="example.hare.com.uimanagerexample.UI.VerticalHolder.VerticalItem" />
+            type="developerse.hare.com.uimanager.UI.VerticalHolder.VerticalItem" />
     </data>
 
     <android.support.constraint.ConstraintLayout

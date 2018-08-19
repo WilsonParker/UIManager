@@ -1,4 +1,4 @@
-package example.hare.com.uimanagerexample.activity;
+package developerse.hare.com.uimanager.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import developers.hare.com.uimanager.Ui.ConstraintArrayView;
-import example.hare.com.uimanagerexample.R;
-import example.hare.com.uimanagerexample.UI.HorizontalHolder;
-import example.hare.com.uimanagerexample.databinding.ActivityHorizontalBinding;
+import developerse.hare.com.uimanager.R;
+import developerse.hare.com.uimanager.UI.HorizontalHolder;
+import developerse.hare.com.uimanager.databinding.ActivityHorizontalBinding;
 
 public class HorizontalActivity extends AppCompatActivity {
     @Override
@@ -19,6 +19,10 @@ public class HorizontalActivity extends AppCompatActivity {
         /*
          * Get the type to place
          * 배치할 type 을 가져온다
+         *
+         * ConstraintArrayView.HORIZONTAL
+         * ConstraintArrayView.LINKED_HORIZONTAL
+         * ConstraintArrayView.INNER_LINKED_HORIZONTAL
          */
         int type = getIntent().getIntExtra("type", ConstraintArrayView.HORIZONTAL);
         /*

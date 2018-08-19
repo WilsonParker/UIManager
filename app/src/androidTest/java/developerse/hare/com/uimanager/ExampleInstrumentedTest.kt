@@ -1,4 +1,4 @@
-package example.hare.com.uimanagerexample
+package developerse.hare.com.uimanager
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

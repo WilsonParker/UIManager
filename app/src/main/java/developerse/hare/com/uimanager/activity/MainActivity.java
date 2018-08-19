@@ -1,4 +1,4 @@
-package example.hare.com.uimanagerexample.activity;
+package developerse.hare.com.uimanager.activity;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -8,8 +8,8 @@ import android.util.Log;
 
 
 import developers.hare.com.uimanager.Ui.ConstraintArrayView;
-import example.hare.com.uimanagerexample.R;
-import example.hare.com.uimanagerexample.databinding.ActivityMainBinding;
+import developerse.hare.com.uimanager.R;
+import developerse.hare.com.uimanager.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
