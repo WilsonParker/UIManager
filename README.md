@@ -3,7 +3,7 @@
 
 @ Setting
 - Project:build.gradle
-
+```gradle
 allprojects {
     repositories {
         google()
@@ -13,6 +13,7 @@ allprojects {
         }
     }
 }
+```
 
 - Module:build.gradle
 implementation 'developers.hare.com:uiamanger:1.0.0'
