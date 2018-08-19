@@ -38,7 +38,7 @@ implementation 'developers.hare.com:uiamanger:1.0.0'
 # ConstraintArrayView
 
 Activitvy
-'''java
+```java
 @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,4 +82,4 @@ Activitvy
                 // Create View
                 .createView(items);
     }
-'''
+```
