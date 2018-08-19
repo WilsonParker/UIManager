@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ConstraintArrayViewAttrs">
+        <attr name="color_text" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalHolderAttrs">
+        <attr name="color_text1" format="color|reference"/>
+        <attr name="color_text2" format="color"/>
+    </declare-styleable>
+</resources>

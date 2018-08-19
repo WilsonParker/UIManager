@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+        <CheckBox
+            android:id="@+id/CB_reverse"
+            android:layout_width="wrap_content"
+            android:text="reverse"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/CB_reverse"
+            android:id="@+id/BT_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Vertical" />
+
+        <Button
+            android:id="@+id/BT_inner_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="inner Vertical"
+            app:layout_constraintTop_toBottomOf="@+id/BT_vertical" />
+
+        <Button
+            android:id="@+id/BT_linked_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="linked Vertical"
+            app:layout_constraintTop_toBottomOf="@+id/BT_inner_vertical" />
+
+        <Button
+            android:id="@+id/BT_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:text="Horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/BT_linked_vertical" />
+
+        <Button
+            android:id="@+id/BT_inner_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="InnerHorizontal"
+            app:layout_constraintTop_toBottomOf="@+id/BT_horizontal" />
+
+        <Button
+            android:id="@+id/BT__linked_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="LinkedHorizontal"
+            app:layout_constraintTop_toBottomOf="@+id/BT_inner_horizontal" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

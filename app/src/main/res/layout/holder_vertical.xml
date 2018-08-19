@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="example.hare.com.uimanagerexample.UI.VerticalHolder.VerticalItem" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/bg">
+
+        <TextView
+            android:id="@+id/TV_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{item.text1 ?? "text1"}'
+            tools:text="text1" />
+
+        <TextView
+            android:id="@+id/delim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text=' : '
+            app:layout_constraintLeft_toRightOf="@id/TV_text1" />
+
+        <TextView
+            android:id="@+id/TV_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text='@{item.text2 ?? "text2"}'
+            app:layout_constraintLeft_toRightOf="@id/delim"
+            tools:text="text2" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
