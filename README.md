@@ -180,6 +180,7 @@ public class HorizontalHolder extends ConstraintArrayView.ArrayItemHolder<Horizo
 ```
 
 @Main Layout
+- activity_horizontal.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -219,6 +220,7 @@ public class HorizontalHolder extends ConstraintArrayView.ArrayItemHolder<Horizo
 ```
 
 @Item Layout
+- holder_horizontal.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
