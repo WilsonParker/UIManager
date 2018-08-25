@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="default_top_title">
+        <attr name="leftButton" format="reference|integer" />
+        <attr name="rightButton" format="reference|integer" />
+        <attr name="titleText" format="reference|string" />
+        <attr name="titleTextSize" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="custom_navigation_view">
+        <attr name="item_layout" format="reference|integer" />
+    </declare-styleable>
+</resources>

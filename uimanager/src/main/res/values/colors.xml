@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- MenuTopTitle-->
+    <color name="menu_top_title_color">#37c2c4</color>
+    <color name="menu_top_title_bar_color">#33d4d1</color>
+    <color name="menu_top_title_text_color">#ffffff</color>
+
+    <!-- default Color -->
+    <color name="default_Image_color">#99dadada</color>
+    <color name="default_theme_Image_color">#33d4d1</color>
+    <color name="default_theme_text_color">#dcdcdc</color>
+    <color name="underLine_color">#d2d2d2</color>
 </resources>

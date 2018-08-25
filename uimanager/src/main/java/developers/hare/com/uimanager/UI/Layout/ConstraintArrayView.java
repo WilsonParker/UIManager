@@ -1,4 +1,4 @@
-package developers.hare.com.uimanager.Ui;
+package developers.hare.com.uimanager.UI.Layout;
 
 import android.content.Context;
 import android.content.res.TypedArray;

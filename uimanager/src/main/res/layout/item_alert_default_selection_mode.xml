@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="developers.hare.com.uimanager.Model.AlertSelectionItemModel" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/IV_icon"
+            android:layout_width="80dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/TV_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="${item.text}"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/IV_icon"
+            tools:text="text" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

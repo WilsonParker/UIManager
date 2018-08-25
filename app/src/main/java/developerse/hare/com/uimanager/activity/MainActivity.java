@@ -4,10 +4,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 
-import developers.hare.com.uimanager.Ui.ConstraintArrayView;
+import developers.hare.com.uimanager.UI.Layout.ConstraintArrayView;
 import developerse.hare.com.uimanager.R;
 import developerse.hare.com.uimanager.databinding.ActivityMainBinding;
 

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:text="Vertical" />
 
-        <developers.hare.com.uimanager.Ui.ConstraintArrayView
+        <developers.hare.com.uimanager.UI.Layout.ConstraintArrayView
             android:id="@+id/arrayView"
             android:layout_width="match_parent"
             android:layout_height="0dp"

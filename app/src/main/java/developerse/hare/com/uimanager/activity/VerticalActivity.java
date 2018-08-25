@@ -7,9 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import developers.hare.com.uimanager.Ui.ConstraintArrayView;
+import developers.hare.com.uimanager.UI.Layout.ConstraintArrayView;
 import developerse.hare.com.uimanager.R;
-import developerse.hare.com.uimanager.UI.HorizontalHolder;
 import developerse.hare.com.uimanager.UI.VerticalHolder;
 import developerse.hare.com.uimanager.databinding.ActivityVerticalBinding;
 
